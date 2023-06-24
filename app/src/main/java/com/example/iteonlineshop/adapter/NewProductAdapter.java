@@ -1,23 +1,23 @@
 package com.example.iteonlineshop.adapter;
 
-import android.annotation.SuppressLint;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+        import android.annotation.SuppressLint;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.DiffUtil;
-import androidx.recyclerview.widget.ListAdapter;
-import androidx.recyclerview.widget.RecyclerView;
+        import androidx.annotation.NonNull;
+        import androidx.recyclerview.widget.DiffUtil;
+        import androidx.recyclerview.widget.ListAdapter;
+        import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.iteonlineshop.api.model.Product;
-import com.example.iteonlineshop.databinding.ViewHolderProductBinding;
-import com.squareup.picasso.Picasso;
+        import com.example.iteonlineshop.api.model.Product;
+        import com.example.iteonlineshop.databinding.ViewHolderProductLabBinding;
+        import com.squareup.picasso.Picasso;
 
-import java.util.Objects;
+        import java.util.Objects;
 
-public class ProductAdapter extends ListAdapter<Product,ProductAdapter.ProductViewHolder> {
-    public ProductAdapter() {
+public class NewProductAdapter extends ListAdapter<Product,NewProductAdapter.ProductViewHolder> {
+    public NewProductAdapter() {
         super(new DiffUtil.ItemCallback<Product>() {
             @Override
             public boolean areItemsTheSame(@NonNull Product oldItem, @NonNull Product newItem) {
@@ -35,7 +35,7 @@ public class ProductAdapter extends ListAdapter<Product,ProductAdapter.ProductVi
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        ViewHolderProductBinding binding = ViewHolderProductBinding.inflate(layoutInflater,parent,false);
+        ViewHolderProductLabBinding binding = ViewHolderProductLabBinding.inflate(layoutInflater,parent,false);
         return new ProductViewHolder(binding);
     }
 
@@ -48,8 +48,8 @@ public class ProductAdapter extends ListAdapter<Product,ProductAdapter.ProductVi
     }
 
     protected static class ProductViewHolder extends RecyclerView.ViewHolder{
-        private ViewHolderProductBinding itemBinding;
-        public ProductViewHolder(ViewHolderProductBinding itemBinding) {
+        private ViewHolderProductLabBinding itemBinding;
+        public ProductViewHolder(ViewHolderProductLabBinding itemBinding) {
             super(itemBinding.getRoot());
             this.itemBinding = itemBinding;
         }

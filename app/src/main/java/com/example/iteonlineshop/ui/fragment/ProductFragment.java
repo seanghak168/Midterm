@@ -7,13 +7,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.example.iteonlineshop.adapter.NewProductAdapter;
 import com.example.iteonlineshop.adapter.ProductAdapter;
 import com.example.iteonlineshop.api.model.Product;
 import com.example.iteonlineshop.api.service.ApiService;
@@ -60,7 +63,7 @@ public class ProductFragment extends Fragment {
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response)
             {
                 if (response.isSuccessful()){
-                    ShowProductList(response.body());
+                    ShowGridProductList(response.body());
                 }else {
                     Toast.makeText(getContext(), "No",Toast.LENGTH_LONG).show();
                 }
@@ -80,6 +83,17 @@ public class ProductFragment extends Fragment {
 
         // Create adapter
         ProductAdapter adapter = new ProductAdapter();
+        adapter.submitList(productList);
+        binding.recyclerView.setAdapter(adapter);
+    }
+
+    private void ShowGridProductList(List<Product> productList){
+        // create layout manager
+        GridLayoutManager gridLayout = new GridLayoutManager(getContext(),2);
+        binding.recyclerView.setLayoutManager(gridLayout);
+
+        // Create adapter
+        NewProductAdapter adapter = new NewProductAdapter();
         adapter.submitList(productList);
         binding.recyclerView.setAdapter(adapter);
     }
