@@ -24,7 +24,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.EditActivity"/>
-        <activity android:name=".ui.activity.SaveActivity"/>
     </application>
 
 </manifest>

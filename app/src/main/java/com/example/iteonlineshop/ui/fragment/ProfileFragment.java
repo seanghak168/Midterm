@@ -21,6 +21,7 @@ import com.example.iteonlineshop.api.model.Product;
 import com.example.iteonlineshop.api.model.Profiles;
 import com.example.iteonlineshop.api.service.ApiService;
 import com.example.iteonlineshop.databinding.FragmentProfileBinding;
+import com.example.iteonlineshop.databinding.ViewHolderProductLabBinding;
 import com.example.iteonlineshop.ui.activity.EditActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -35,6 +36,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProfileFragment extends Fragment {
     private FragmentProfileBinding binding;
+
 
     @Nullable
     @Override
@@ -69,5 +71,5 @@ public class ProfileFragment extends Fragment {
         Intent intent = new Intent(getActivity(), EditActivity.class);
         startActivity(intent);
     }
-
 }
+

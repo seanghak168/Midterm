@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,7 +33,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductFragment extends Fragment {
     private FragmentProductBinding binding;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -63,7 +61,7 @@ public class ProductFragment extends Fragment {
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response)
             {
                 if (response.isSuccessful()){
-                    ShowGridProductList(response.body());
+                    ShowProductList(response.body());
                 }else {
                     Toast.makeText(getContext(), "No",Toast.LENGTH_LONG).show();
                 }
@@ -97,4 +95,6 @@ public class ProductFragment extends Fragment {
         adapter.submitList(productList);
         binding.recyclerView.setAdapter(adapter);
     }
+
 }
+

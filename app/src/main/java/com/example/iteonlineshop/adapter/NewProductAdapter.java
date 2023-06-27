@@ -1,9 +1,8 @@
 package com.example.iteonlineshop.adapter;
 
-        import android.annotation.SuppressLint;
-        import android.view.LayoutInflater;
-        import android.view.View;
-        import android.view.ViewGroup;
+import android.annotation.SuppressLint;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 
         import androidx.annotation.NonNull;
         import androidx.recyclerview.widget.DiffUtil;
@@ -12,7 +11,7 @@ package com.example.iteonlineshop.adapter;
 
         import com.example.iteonlineshop.api.model.Product;
         import com.example.iteonlineshop.databinding.ViewHolderProductLabBinding;
-        import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Picasso;
 
         import java.util.Objects;
 
@@ -41,18 +40,17 @@ public class NewProductAdapter extends ListAdapter<Product,NewProductAdapter.Pro
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-
         Product item = getItem(position);
         holder.bind(item);
-
     }
 
     protected static class ProductViewHolder extends RecyclerView.ViewHolder{
-        private ViewHolderProductLabBinding itemBinding;
+        private final ViewHolderProductLabBinding itemBinding;
         public ProductViewHolder(ViewHolderProductLabBinding itemBinding) {
             super(itemBinding.getRoot());
             this.itemBinding = itemBinding;
         }
+
         @SuppressLint("SetTextI18n")
         public void bind(Product product){
             Picasso.get().load(product.getImageUrl()).into(itemBinding.imgProduct);
@@ -60,5 +58,6 @@ public class NewProductAdapter extends ListAdapter<Product,NewProductAdapter.Pro
             itemBinding.txtPrice.setText(Long.toString(product.getPrice()));
             itemBinding.txtRating.setText(Double.toString(product.getRating()));
         }
+
     }
 }

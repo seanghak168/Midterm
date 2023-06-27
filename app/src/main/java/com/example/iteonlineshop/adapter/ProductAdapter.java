@@ -2,7 +2,6 @@ package com.example.iteonlineshop.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -59,6 +58,8 @@ public class ProductAdapter extends ListAdapter<Product,ProductAdapter.ProductVi
             itemBinding.txtName.setText(product.getName());
             itemBinding.txtPrice.setText(Long.toString(product.getPrice()));
             itemBinding.txtRating.setText(Double.toString(product.getRating()));
+
         }
+
     }
 }
