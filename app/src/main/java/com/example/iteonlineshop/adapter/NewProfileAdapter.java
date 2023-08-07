@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.iteonlineshop.api.model.Product;
 import com.example.iteonlineshop.api.model.Profiles;
 import com.example.iteonlineshop.databinding.ActivityEditBinding;
-import com.example.iteonlineshop.databinding.ViewHolderProductBinding;
 import com.example.iteonlineshop.databinding.ViewHolderProfileBinding;
 import com.squareup.picasso.Picasso;
 

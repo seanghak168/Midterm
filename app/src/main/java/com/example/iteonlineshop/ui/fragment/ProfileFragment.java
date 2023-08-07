@@ -10,23 +10,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.iteonlineshop.adapter.NewProductAdapter;
-import com.example.iteonlineshop.adapter.NewProfileAdapter;
-import com.example.iteonlineshop.adapter.ProductAdapter;
 import com.example.iteonlineshop.adapter.ProfileAdapter;
-import com.example.iteonlineshop.api.model.Product;
 import com.example.iteonlineshop.api.model.Profiles;
 import com.example.iteonlineshop.api.service.ApiService;
 import com.example.iteonlineshop.databinding.FragmentProfileBinding;
-import com.example.iteonlineshop.databinding.ViewHolderProductLabBinding;
 import com.example.iteonlineshop.ui.activity.EditActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/drawable/bg_.xml" value="0.1" />
+        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/drawable/bg_edit.xml" value="0.178" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/drawable/bg_search.xml" value="0.157" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/drawable/ic_camera.xml" value="0.1" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/drawable/ic_edit.xml" value="0.1" />
@@ -12,18 +12,23 @@
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/drawable/ic_more.xml" value="0.1" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/drawable/ic_product.xml" value="0.1" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/drawable/ic_search.xml" value="0.1" />
+        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/activity_detail_products.xml" value="0.264" />
+        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/activity_edit.xml" value="0.264" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/edit_view_holder.xml" value="0.264" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/fragment_home.xml" value="0.2115036231884058" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/fragment_more.xml" value="0.2115036231884058" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/fragment_product.xml" value="0.2115036231884058" />
-        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
-        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/view_holder_product.xml" value="0.3944723618090452" />
+        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/profilee_edit_new.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/view_holder_product.xml" value="0.23155216284987276" />
+        <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/view_holder_product_lab.xml" value="0.264" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/layout/view_holder_profile.xml" value="0.2" />
         <entry key="..\:/Users/seanghak/StudioProjects/ITEOnlineShop/app/src/main/res/menu/menu.xml" value="0.25" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

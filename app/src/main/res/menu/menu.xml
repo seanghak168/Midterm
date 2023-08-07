@@ -7,7 +7,7 @@
         android:title="@string/home" />
     <item
         android:id="@+id/mnuProduct"
-        android:icon="@drawable/ic_product"
+        android:icon="@drawable/baseline_location_on_24"
         android:title="@string/product" />
     <item
         android:id="@+id/mnuProfile"
