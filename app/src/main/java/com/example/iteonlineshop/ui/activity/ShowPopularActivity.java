@@ -1,25 +1,16 @@
 package com.example.iteonlineshop.ui.activity;
 
 import static android.content.ContentValues.TAG;
-
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
-
+import android.view.WindowManager;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
-import com.example.iteonlineshop.adapter.CultureAdapter;
-import com.example.iteonlineshop.adapter.HomePostsAdapter;
 import com.example.iteonlineshop.adapter.PopularAdapter;
-import com.example.iteonlineshop.api.model.Culture;
-import com.example.iteonlineshop.api.model.PhnomPenh;
 import com.example.iteonlineshop.api.model.Popular_visit;
 import com.example.iteonlineshop.api.service.ApiService;
-import com.example.iteonlineshop.databinding.ActivityCultureBinding;
-import com.example.iteonlineshop.databinding.ActivityVisitPhnompenhBinding;
+import com.example.iteonlineshop.databinding.ActivityVisitPopularBinding;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -31,16 +22,18 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ShowPhnompenhActivity extends AppCompatActivity {
-    private ActivityVisitPhnompenhBinding binding;
+public class ShowPopularActivity extends AppCompatActivity {
+    private ActivityVisitPopularBinding binding;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityVisitPhnompenhBinding.inflate(getLayoutInflater());
+        binding = ActivityVisitPopularBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         LoadPhnomPenhListFromServer();
         binding.imgback.setOnClickListener(v -> finish());
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
     private void LoadPhnomPenhListFromServer(){
         Gson gson = new GsonBuilder().setLenient().create();

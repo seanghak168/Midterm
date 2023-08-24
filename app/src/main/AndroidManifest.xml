@@ -24,7 +24,12 @@
         </activity>
         <activity android:name=".ui.activity.EditActivity"/>
         <activity android:name=".ui.activity.CultureActivity"/>
-        <activity android:name=".ui.activity.ShowPhnompenhActivity"/>
+        <activity android:name=".ui.activity.ShowPopularActivity"/>
+        <activity android:name=".ui.activity.HistoryActivity"/>
+        <activity android:name=".ui.activity.MountainActivity"/>
+        <activity android:name=".ui.activity.MuseumsActivity"/>
+        <activity android:name=".ui.activity.SeaActivity"/>
+        <activity android:name=".ui.activity.TempleActivity"/>
+        <activity android:name=".ui.activity.DetailActivity"/>
     </application>
-
 </manifest>

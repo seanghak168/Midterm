@@ -22,8 +22,12 @@ import com.example.iteonlineshop.api.model.Popular_visit;
 import com.example.iteonlineshop.api.service.ApiService;
 import com.example.iteonlineshop.databinding.FragmentHomeBinding;
 import com.example.iteonlineshop.ui.activity.CultureActivity;
-import com.example.iteonlineshop.ui.activity.EditActivity;
-import com.example.iteonlineshop.ui.activity.ShowPhnompenhActivity;
+import com.example.iteonlineshop.ui.activity.HistoryActivity;
+import com.example.iteonlineshop.ui.activity.MountainActivity;
+import com.example.iteonlineshop.ui.activity.MuseumsActivity;
+import com.example.iteonlineshop.ui.activity.SeaActivity;
+import com.example.iteonlineshop.ui.activity.ShowPopularActivity;
+import com.example.iteonlineshop.ui.activity.TempleActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -42,6 +46,11 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         binding.txtCulture.setOnClickListener(v -> startEditActivity());
+        binding.History.setOnClickListener(v -> startHistoryActivity());
+        binding.Mountain.setOnClickListener(v -> startMountainActivity());
+        binding.Museums.setOnClickListener(v -> startMuseumsActivity());
+        binding.Sea.setOnClickListener(v -> startSeaActivity());
+        binding.Temple.setOnClickListener(v -> startTempleActivity());
         binding.more.setOnClickListener(v -> startMoreActivity());
         return binding.getRoot();
     }
@@ -50,10 +59,31 @@ public class HomeFragment extends Fragment {
         startActivity(intent);
     }
     private void startMoreActivity(){
-        Intent intent = new Intent(getActivity(), ShowPhnompenhActivity.class);
+        Intent intent = new Intent(getActivity(), ShowPopularActivity.class);
+        startActivity(intent);
+    }
+    private void startMountainActivity(){
+        Intent intent = new Intent(getActivity(), MountainActivity.class);
+        startActivity(intent);
+    }
+    private void startHistoryActivity(){
+        Intent intent = new Intent(getActivity(), HistoryActivity.class);
+        startActivity(intent);
+    }
+    private void startMuseumsActivity(){
+        Intent intent = new Intent(getActivity(), MuseumsActivity.class);
         startActivity(intent);
     }
 
+    private void startSeaActivity(){
+        Intent intent = new Intent(getActivity(), SeaActivity.class);
+        startActivity(intent);
+    }
+
+    private void startTempleActivity(){
+        Intent intent = new Intent(getActivity(), TempleActivity.class);
+        startActivity(intent);
+    }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -98,9 +128,6 @@ public class HomeFragment extends Fragment {
         adapter.submitList(productList);
         binding.RecyclerViewVisitPhnompenh.setAdapter(adapter);
     }
-
-
-
     private void LoadPhnomPenhListFromServer(){
         Gson gson = new GsonBuilder().setLenient().create();
         Retrofit httpClient = new Retrofit.Builder()

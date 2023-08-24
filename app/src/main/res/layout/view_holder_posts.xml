@@ -10,18 +10,29 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/view1"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="150dp"
             android:background="#0A4CAF50"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2">
 
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_navigate_next_24" />
+
                 <androidx.cardview.widget.CardView
                     android:id="@+id/card1"
                     android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_height="100dp"
                     android:layout_marginTop="16dp"
                     app:cardElevation="4dp"
+                    app:cardCornerRadius="4dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -34,10 +45,10 @@
 
                 <TextView
                     android:id="@+id/txtDescription"
-                    android:layout_width="230dp"
+                    android:layout_width="0dp"
                     android:layout_height="85dp"
-                    android:layout_marginStart="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView3"
                     app:layout_constraintStart_toEndOf="@+id/card1"
                     app:layout_constraintTop_toBottomOf="@+id/txtName"
                     tools:text="Angkor Wat is a temple complex in Cambodia, located on a site measuring 162.6 hectares. The Guinness World Records considers it as the largest religious structure in the world. " />
@@ -46,12 +57,12 @@
                     android:id="@+id/txtName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
                     android:text="Category-Temple"
                     android:textColor="#368a63"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/card1"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -78,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="32dp"
                     android:text="123"
                     app:layout_constraintBottom_toBottomOf="@+id/textView"
                     app:layout_constraintEnd_toEndOf="parent"
